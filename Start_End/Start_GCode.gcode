@@ -2,9 +2,10 @@
 ; SV01 Custom Start G-code
 ; BLTOUCH, 300x255 Build Size, AUTO_BED_LEVELING_UBL, Junction Deviation
 ;
-M201 X500.00 Y500.00 Z100.00 E1000.00 ;Setup machine max acceleration
+M201 X800.00 Y800.00 Z100.00 E1000.00 ;Setup machine max acceleration
 M203 X300.00 Y300.00 Z10.00 E50.00 ;Setup machine max feedrate
-M204 P500.00 R1000.00 T500.00 ;Setup Print/Retract/Travel acceleration
+M204 P800.00 R1000.00 T800.00 ;Setup Print/Retract/Travel acceleration
+M900 K0.16 ; Linear Advance K-Factor
 M220 S100 ;Reset Feedrate
 M221 S100 ;Reset Flowrate
 M140 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
